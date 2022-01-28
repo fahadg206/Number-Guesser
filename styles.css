@@ -8,7 +8,20 @@
     height: 100vh; 
     text-align: center;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
+.border {
+    border: 5px solid white;
+    border-width: medium;
+    padding: 100px;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    
 }
 
 input,  button {
@@ -16,6 +29,10 @@ input,  button {
     margin-top: 15px;
 }
 
+button {
+    background-color: rgb(102, 69, 102);
+    color: white;
+}
 
 h2 {
     font-size: 2rem;
@@ -23,8 +40,15 @@ h2 {
     text-shadow: 5px 5px 10px rgb(102, 69, 102);
 }
 
-p {
-    color: royalblue;
+#numofguesses {
+    color: white;
+    text-shadow: 5px 5px 10px rgb(102, 69, 102);
+    padding: 20px;
+    font-size: 20px;
+}
+
+#yourguess {
+    color: rgb(102, 69, 102);
     padding: 20px;
     font-size: 25px;
 }

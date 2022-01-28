@@ -14,4 +14,8 @@ button.addEventListener('click', () => {
     } else if(input < number) {
         yourGuess.innerHTML = `Sorry! ${input} was too low.`
     }
-})
+}
+
+    
+
+)
