@@ -31,6 +31,7 @@ button.addEventListener('click', () => {
 
     if(numOfGuesses === 3) {
         hint.innerHTML = `Better luck next time! The correct number was ${number}`;
+        window.alert("GAME OVER! Click OK to reveal answer.");
     }
 
     
