@@ -17,6 +17,7 @@ button.addEventListener('click', () => {
     numOfGuesses += 1;
     guessCounter.innerHTML = "Number of Guesses: " + numOfGuesses;
 
+
     //hint logic
     if(input == number) {
         hint.innerHTML = `Congrats! The number ${number} was CORRECT!`;
@@ -30,8 +31,8 @@ button.addEventListener('click', () => {
     };
 
     if(numOfGuesses === 3) {
-        hint.innerHTML = `Better luck next time! The correct number was ${number}`;
-        window.alert("GAME OVER! Click OK to reveal answer.");
+        hint.innerHTML = "Better luck next time!";
+        window.alert(`GAME OVER! The correct answer was ${number}`);
     }
 
     
