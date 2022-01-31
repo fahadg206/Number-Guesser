@@ -47,7 +47,13 @@ h2 {
     font-size: 20px;
 }
 
-#yourguess {
+#hint {
+    color: rgb(102, 69, 102);
+    padding: 20px;
+    font-size: 25px;
+}
+
+#yourguesses {
     color: rgb(102, 69, 102);
     padding: 20px;
     font-size: 25px;
