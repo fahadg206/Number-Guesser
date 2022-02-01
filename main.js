@@ -5,7 +5,7 @@ const guessCounter = document.getElementById("numofguesses");
 const yourGuesses = document.getElementById('yourguesses');
 let numOfGuesses = 0;
 
-const number = Math.floor(Math.random()*100);
+const number = Math.floor(Math.random()* 100 ) + 1;
 let userGuess = text.value;
 let storeGuesses = [];
 
@@ -19,7 +19,13 @@ button.addEventListener('click', () => {
 
 
     //hint logic
-    if(input == number) {
+    
+    if(input < 1 || input > 100) {
+        window.alert('Invalid number. Please enter a number between 1-100');
+        numOfGuesses = 0;
+    };
+
+    if(input === number) {
         hint.innerHTML = `Congrats! The number ${number} was CORRECT!`;
         yourGuesses.innerHTML = "Your Guesses:" + " " + storeGuesses;
     } else if(input > number) {
@@ -30,10 +36,17 @@ button.addEventListener('click', () => {
         yourGuesses.innerHTML = "Your Guesses:" + " " + storeGuesses;
     };
 
+
+
+
+
+
     if(numOfGuesses === 3) {
         hint.innerHTML = "Better luck next time!";
         window.alert(`GAME OVER! The correct answer was ${number}`);
-    }
+    };
+
+
 
     
 
