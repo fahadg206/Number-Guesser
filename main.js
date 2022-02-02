@@ -9,17 +9,16 @@ const number = Math.floor(Math.random()* 100 ) + 1;
 
 let storeGuesses = [];
 
-
 button.addEventListener('click', () => {
-    const text = document.getElementById('userinput');
-    let userGuess = text.value;
+    
+    let finalGuess = document.getElementById('userinput').value;
+    let userGuess = Number(finalGuess);
     
     let arrayOfGuesses = storeGuesses.push(userGuess);
-
+    
     // Keep track of how many times the user takes a guess
     numOfGuesses += 1;
     guessCounter.innerHTML = "Number of Guesses: " + numOfGuesses;
-
 
     //hint logic
     
@@ -31,6 +30,7 @@ button.addEventListener('click', () => {
     if(userGuess === number) {
         hint.innerHTML = `Congrats! The number ${number} was CORRECT!`;
         yourGuesses.innerHTML = "Your Guesses:" + " " + storeGuesses;
+        console.log(number);
     } else if(userGuess > number) {
         hint.innerHTML = `Sorry! ${userGuess} was too high.`;
         yourGuesses.innerHTML = "Your Guesses:" + " " + storeGuesses;
