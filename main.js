@@ -11,10 +11,10 @@ let storeGuesses = [];
 
 button.addEventListener('click', () => {
     
-    let finalGuess = document.getElementById('userinput').value;
-    let userGuess = Number(finalGuess);
+    const finalGuess = document.getElementById('userinput').value;
+    const userGuess = Number(finalGuess);
     
-    let arrayOfGuesses = storeGuesses.push(userGuess);
+    const arrayOfGuesses = storeGuesses.push(userGuess);
     
     // Keep track of how many times the user takes a guess
     numOfGuesses += 1;
